@@ -1,4 +1,6 @@
-# MyFirstStaticWebsite
+This project is made with refrence of Youtube and Angular.io documentations. All the node files are not commited here. you can get it when you install angular in you pc. This is made just for practice and anyone can make use of this code for their practice.
+
+# MyFirstStaticWebsite on angular 6+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
