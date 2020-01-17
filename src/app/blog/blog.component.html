@@ -1,0 +1,14 @@
+<section id="pricing" class="secondary-color text-center scrollto clearfix ">
+  <div class="row clearfix">
+      <div class="section-heading">
+          <h3>{{blog.title}}</h3>
+          <h2 class="section-title">{{blog.discription}}</h2>
+      </div>
+      <div class="pricing-block col-3 wow fadeInLeft" data-wow-delay="0.1s" *ngFor="let post of pages">
+        <app-post [post]='post'></app-post> <!--[post] is for @Input() post: any. here post value is send to blog's js-->
+      </div>
+  </div>
+  <div class="row clearfix" [ngStyle]="{'padding-top': 0}">
+    <app-pagination *ngIf='pager' [pager]='pager' (setpage)="setPage($event)"></app-pagination>
+  </div>
+</section>

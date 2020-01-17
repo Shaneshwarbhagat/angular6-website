@@ -1,0 +1,62 @@
+<div id="header" class="nav-collapse">
+    <div class="row clearfix">
+        <div class="col-1">
+
+            <!--Logo-->
+            <div id="logo">
+                <!--Logo that is shown on the banner-->
+                <img src="../assets/images/logo.png" id="banner-logo" alt="Angular By Shani"/>
+                <!--End of Banner Logo-->
+
+                <!--The Logo that is shown on the sticky Navigation Bar-->
+                <img src="../assets/images/logo.png" id="navigation-logo" alt="Angular By Shani"/>
+                <!--End of Navigation Logo-->
+            </div>
+            <!--End of Logo-->
+
+
+            <!--Social Icons in Header-->
+            <aside>
+              <app-social></app-social>
+            </aside>
+              
+            <!--End of Social Icons in Header-->         
+
+
+            <!--Main Navigation-->
+                <nav id="nav-main">
+                    <ul>
+                        <li>
+                            <a routerLink="/Home" (click)="onActiveTab('home')" [class.active]="activeTab=='home'"  routerLinkActive="active-link">Home</a>
+                        </li>
+                        <li>
+                            <a routerLink="/About" (click)="onActiveTab('about')" [class.active]="activeTab=='about'" routerLinkActive="active-link">About</a>
+                        </li>
+                        <li>
+                            <a routerLink="/Gallery" (click)="onActiveTab('gallery')" [class.active]="activeTab=='gallery'" routerLinkActive="active-link">Gallery</a>
+                        </li>
+                        <li>
+                            <a routerLink="/Services" (click)="onActiveTab('services')" [class.active]="activeTab=='services'" routerLinkActive="active-link">Services</a>
+                        </li>
+                        <li>
+                            <a routerLink="/Testimonial" (click)="onActiveTab('testimonial')" [class.active]="activeTab=='testimonial'" routerLinkActive="active-link">Testimonials</a>
+                        </li>
+                        <li>
+                            <a routerLink="/Clients" (click)="onActiveTab('clients')" [class.active]="activeTab=='clients'" routerLinkActive="active-link">Clients</a>
+                        </li>
+                        <li>
+                            <a routerLink="/Pricing" (click)="onActiveTab('pricing')" [class.active]="activeTab=='pricing'" routerLinkActive="active-link">Pricing</a>
+                        </li>
+                        <li>
+                            <a routerLink="/Blog" (click)="onActiveTab('blog')" [class.active]="activeTab=='blog'" routerLinkActive="active-link">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            <!--End of Main Navigation-->
+
+            <div id="nav-trigger"><span></span></div>
+            <nav id="nav-mobile"></nav>
+
+        </div>
+    </div>
+</div><!--End of Header-->

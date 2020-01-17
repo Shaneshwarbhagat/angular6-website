@@ -1,0 +1,17 @@
+ul li{
+    list-style: none;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+ul li a{
+    padding:6px 10px;
+    border: 1px solid #ff7b00;
+    margin:5px;
+}
+
+li.disabled{
+    cursor: not-allowed !important;
+    opacity: 0.5;
+    text-decoration: none;
+}

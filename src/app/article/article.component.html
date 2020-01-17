@@ -1,0 +1,17 @@
+ <!--Article Block-->
+ <div class="wow fadeInUp" data-wow-delay="0.4s">
+    
+  <div class="">
+      <h3>{{displydata.title}}</h3><br>
+      <div class="pricing">
+          <img src='{{displydata.img}}'/>          
+          <p>Author: {{displydata.author | uppercase}} | Date: {{displydata.date | date:'dd-MMM-yyyy'}}</p>
+          <p class="pricing-sub">{{displydata.description}}</p>
+      </div>
+      <a routerLink="/Blog" class="button">Go to Blog</a>   <!-- Another way to get back  --> &nbsp; &nbsp;
+      <!-- OR  -->
+      <button (click)='getBack()' class="button">Back Button</button> &nbsp; &nbsp;
+   
+  </div>
+</div>
+<!--End Article Block-->
