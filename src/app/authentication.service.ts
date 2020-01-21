@@ -4,13 +4,14 @@ import  { Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 import {tap, map, catchError} from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   apiUrl = "api/users"
 
@@ -31,9 +32,6 @@ export class AuthenticationService {
     return this.http.post<any>(`${this.apiUrl}/signup`, formData).pipe(
       tap(user => {
         console.log(user);
-        // if(user && user.token){
-        //   localStorage.setItem("currentUser", JSON.stringify(user));
-        // }
       }),
       catchError(this.handleError('signup', []))
     )
@@ -49,6 +47,13 @@ export class AuthenticationService {
       }),
       catchError(this.handleError('login', []))
     )
+  }
+
+  logout(){
+    if(localStorage.getItem('currentUser')){
+      localStorage.removeItem('currentUser');
+      this.router.navigate(['/Home']);
+    }
   }
 
 

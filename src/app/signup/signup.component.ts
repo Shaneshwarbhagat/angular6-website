@@ -26,8 +26,8 @@ export class SignupComponent implements OnInit {
   signup(formData: NgForm){
     return this.auth.signup(formData).subscribe(
       (user) => {
-          console.log(`ADDED USER: ${user}`);
-          this.router.navigate(['login']);
+        console.log(`Added user ${JSON.stringify(user)}`);
+        this.router.navigate(['Login']);
       });
   }
 

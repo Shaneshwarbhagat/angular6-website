@@ -20,9 +20,8 @@ export class LoginComponent implements OnInit {
         'email': [null, [Validators.required, Validators.email]],
         'password': [null, Validators.required]
       });
-      // alert(this.returnUrl);
       this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-      
+      // alert(this.returnUrl);
     }
 
   login(formData: NgForm){

@@ -9,6 +9,7 @@ import { ConfigService } from './config.service';
 import { PagerService } from './pager.service';
 import { RoutegaurdService } from './routegaurd.service'
 import {InMemoryDataService } from './in-memory-data.service';
+import { AuthenticationService } from './authentication.service';
 
 import { AppRoutingModule } from './/app-routing.module';
 
@@ -63,7 +64,7 @@ import { ContactusComponent } from './contactus/contactus.component';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
-  providers: [ConfigService, PagerService, RoutegaurdService],
+  providers: [ConfigService, PagerService, RoutegaurdService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
