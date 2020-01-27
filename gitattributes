@@ -17,6 +17,7 @@
 
 .gitattributes  export-ignore
 .gitignore      export-ignore
+ project-docs/* linguist-documentation
 
 #
 # Enable syntax highlighting for files with `.gitattributes` extensions.
